@@ -1,1 +1,90 @@
-# aggregate-survey-data
+# AGGREGATE SURVEY DATA
+
+## GAME-PLAN
+#### I. Set up Back End - [ Node.js + Express ]
+1. Basic Set up:
+-   [DONE] Create & Test home route '/'
+    - REQ: NA
+    - RES: str HelloWorld
+-   [] Create & Test Survey '/postSurvey' to GET CSV
+    - REQ: CSV
+    - RES: str 'GotSurvey'/'There was a problem getting the survey'
+-   [] Create & Test function csvToJSON()
+    - IN: CSV
+    - OUT: JSON
+2. DB Set up:
+-   [] Create DB Schema
+```
+    --- SurveySchema ---
+    
+    _id: (autoGenId)
+    name: str (CSV File name)
+    surveyData: [UserSchema]
+    
+    
+    --- UserSchema --- (SubDocument)
+    userID: int
+    questions: [{question: str, answer: str}] 
+```
+-   [] Update & Test '/postSurvey' to POST to DB
+    - REQ: CSV blob
+    - RES: 'uploaded to DB successful' / 'there was a problem'
+-   [] Create & Test '/deleteSurvey' to DELETE from DB given surveyID
+    - REQ: {str: surveyID, str: surveyName}
+    - RES: 'survey deleted successful' / 'there was a problem deleting the survey'
+3. Final Steps
+-   [] Create & Test function getSurveys()
+    - IN: NA
+    - OUT: JSON with all Survey IDs and Names
+-   [] Update & Test '/postSurvey' to return Object with all surveys IDs and Names
+    - REQ: CSV blob
+    - RES: JSON with all Survey ID's and Names
+-   [] Update & Test '/deleteSurvey' to POST updated list of all Survey Names and IDs
+    - REQ: {str: surveyID, str: surveyName}
+    - RES: JSON with all Survey ID's and Names
+-   [] Create & Test function getAggregateData()
+    - IN: JSON with Survey results
+    - OUT: JSON with the aggregate data
+-   [] Create & Test '/getSurveyResults' to POST survey results
+    - REQ: {str: surveyID, str: surveyName}
+    - RES: JSON with the aggregate data
+
+#### II. Set up Front End - [ React ]
+1. Basic Front End Set Up
+-   [] Get redux, react-redux, react-router-dom, http-proxy-middleware
+-   [] Set up Proxy
+-   [] Wire up Redux
+2. Functionality on HOME page
+-   [] Create home page
+    1. [] Wire up & Test Upload
+    2. [] Wire up & Test Survey List
+    3. [] Wire up & Test Delete Survey
+    -  [] Upload Button
+        -   [] OnCLick for upload Button
+            -   [] Need to upload and send a blob ???
+    -   [] I will also have the table/ list of surveys
+        -   [] OnClick for delete Button
+            - [] Need to send a request to the server with the selected Survey Name and ID
+        -   [] OnClick on Survey Name
+            - [] Need to open a new page containing the aggregate data in tables
+```html
+                ---------------------
+                |   Upload Button   |
+                ---------------------
+
+        #      Name
+        1.     FavoriteAnimals.csv       delete
+        2.     FavoriteAnimals.csv       delete
+        3.     FavoriteAnimals.csv       delete
+                        .
+                        .
+                        .
+```
+3. [] Functionality on AGGREGATE DATA Page
+- [] Create Page containing aggregate data
+    - [] Needs to have dynamic table ( Depending on the different aggregate data for each question )
+    - [] Needs to have dynamic amount of tables ( Depending on the number of questions )
+- [] First need to make sure that the data flow is consistent
+- [] Once Everything is wired up, create a functional component Dynamic Table
+
+Planning 45 minutes
