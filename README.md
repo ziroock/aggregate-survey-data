@@ -13,7 +13,7 @@
     - IN: CSV
     - OUT: JSON
 2. DB Set up:
--   [] Create DB Schema
+-   [DONE] Create DB Schema
 ```
     --- SurveySchema ---
     

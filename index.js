@@ -2,8 +2,14 @@ const express = require('express');
 const multer = require('multer');
 const csv = require('csvtojson');
 const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
 
 let upload = multer({ dest: 'tempCSV/' });
+
+mongoose.connect(keys.mongoURI, {
+    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+});
 
 const app = express();
 app.use(express.json());
