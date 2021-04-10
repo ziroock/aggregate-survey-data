@@ -6,7 +6,7 @@
 -   [DONE] Create & Test home route '/'
     - REQ: NA
     - RES: str HelloWorld
--   [] Create & Test Survey '/postSurvey' to GET CSV
+-   [DONE] Create & Test Survey '/postSurvey' to GET CSV
     - REQ: CSV
     - RES: str 'GotSurvey'/'There was a problem getting the survey'
 -   [] Create & Test function csvToJSON()
