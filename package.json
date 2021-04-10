@@ -1,0 +1,23 @@
+{
+  "name": "aggregate-survey-data",
+  "version": "1.0.0",
+  "description": "## GAME-PLAN #### I. Set up Back End - [ Node.js + Express ] 1. Basic Set up: -   [] Create & Test home route '/'     - REQ: NA     - RES: str HelloWorld -   [] Create & Test Survey '/postSurvey' to GET CSV     - REQ: CSV     - RES: str 'GotSurvey'/'There was a problem getting the survey' -   [] Create & Test function csvToJSON()     - IN: CSV     - OUT: JSON 2. DB Set up: -   [] Create DB Schema ```     --- SurveySchema ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziroock/aggregate-survey-data.git"
+  },
+  "author": "Zaprin Ignatiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziroock/aggregate-survey-data/issues"
+  },
+  "homepage": "https://github.com/ziroock/aggregate-survey-data#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
