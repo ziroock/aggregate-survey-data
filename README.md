@@ -54,11 +54,11 @@
 -   [DONE] Get concurrently to run both front and back ends
 -   [DONE] Get redux, react-redux, react-router-dom, http-proxy-middleware
 -   [DONE] Set up Proxy
--   [] Wire up Redux
+-   [DONE] Wire up Redux
 2. Functionality on HOME page
 -   [] Create home page
     1. [DONE] Wire up & Test Upload
-    2. [] Wire up & Test Survey List
+    2. [DONE] Wire up & Test Survey List
     3. [] Wire up & Test Delete Survey
     -  [DONE] Upload Button
         -   [DONE] OnCLick for upload Button

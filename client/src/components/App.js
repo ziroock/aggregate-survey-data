@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-import UploadCSV from './UploadCSV';
-
+import Dashboard from './Dashboard';
+import Header from './Header';
 
 class App extends Component {
     render() {
         return (
-            <div id="App">
-                Hello World!
-                <UploadCSV />
-            </div>
+            <BrowserRouter>
+                <Header/>
+                <Route exact path={'/'} component={Dashboard}/>
+            </BrowserRouter>
         );
     }
 }
 
-export default App;
+export default connect(null, actions)(App);

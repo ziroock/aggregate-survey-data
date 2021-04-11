@@ -17,6 +17,7 @@ module.exports = app => {
         const filePath = csvFile.destination + csvFile.filename;
         const fileName = csvFile.originalname;
         let jsonObject = await csvToJSON(filePath);
+        console.log(csvFile);
 
         const survey = new Survey({
             name: fileName,
@@ -24,7 +25,7 @@ module.exports = app => {
                 userID: obj.userId,
                 questions: obj.questions
             })),
-            dateReceived: Date.now()
+            dateUploaded: Date.now()
         });
         try {
             await survey.save();
