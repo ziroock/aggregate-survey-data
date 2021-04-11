@@ -51,7 +51,8 @@
 
 #### II. Set up Front End - [ React ]
 1. Basic Front End Set Up
--   [] Get redux, react-redux, react-router-dom, http-proxy-middleware
+-   [DONE] Get concurrently to run both front and back ends
+-   [DONE] Get redux, react-redux, react-router-dom, http-proxy-middleware
 -   [] Set up Proxy
 -   [] Wire up Redux
 2. Functionality on HOME page
