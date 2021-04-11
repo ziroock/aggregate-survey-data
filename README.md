@@ -26,27 +26,27 @@
     userID: int
     questions: [{question: str, answer: str}] 
 ```
--   [] Update & Test '/postSurvey' to POST to DB
+-   [DONE] Update & Test '/postSurvey' to POST to DB
     - REQ: CSV blob
     - RES: 'uploaded to DB successful' / 'there was a problem'
--   [] Create & Test '/deleteSurvey' to DELETE from DB given surveyID
-    - REQ: {str: surveyID, str: surveyName}
+-   [DONE] Create & Test '/deleteSurvey' to DELETE from DB given surveyID
+    - REQ: {str: surveyID}
     - RES: 'survey deleted successful' / 'there was a problem deleting the survey'
 3. Final Steps
--   [] Create & Test function getSurveys()
-    - IN: NA
-    - OUT: JSON with all Survey IDs and Names
--   [] Update & Test '/postSurvey' to return Object with all surveys IDs and Names
+-   [DONE] Create & Test '/getSurveys'
+    - REQ: NA
+    - RES: JSON with all Survey IDs and Names
+-   [DONE] Update & Test '/postSurvey' to return Object with all surveys IDs and Names
     - REQ: CSV blob
     - RES: JSON with all Survey ID's and Names
--   [] Update & Test '/deleteSurvey' to POST updated list of all Survey Names and IDs
+-   [DONE] Update & Test '/deleteSurvey' to POST updated list of all Survey Names and IDs
     - REQ: {str: surveyID, str: surveyName}
     - RES: JSON with all Survey ID's and Names
--   [] Create & Test function getAggregateData()
+-   [DONE] Create & Test function getAggregateData()
     - IN: JSON with Survey results
     - OUT: JSON with the aggregate data
--   [] Create & Test '/getSurveyResults' to POST survey results
-    - REQ: {str: surveyID, str: surveyName}
+-   [DONE] Create & Test '/getAggregateSurvey' to POST survey results
+    - REQ: {str: surveyID}
     - RES: JSON with the aggregate data
 
 #### II. Set up Front End - [ React ]
