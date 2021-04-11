@@ -5,7 +5,6 @@ import SurveyList from './surveys/SurveyList';
 const Dashboard = () => {
     return(
         <React.Fragment>
-            Hello World!
             <UploadSurvey />
             <SurveyList />
         </React.Fragment>

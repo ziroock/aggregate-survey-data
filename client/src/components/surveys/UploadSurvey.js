@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { postSurvey } from '../../actions';
+
 
 class UploadSurvey extends Component {
     constructor(props) {
@@ -18,11 +20,7 @@ class UploadSurvey extends Component {
     onClickHandler = () => {
         const data = new FormData()
         data.append('file', this.state.selectedFile)
-        axios.post("/api/postSurvey", data, {
-            // receive two    parameter endpoint url ,form data
-        }).then(res => { // then print response status
-            console.log(res)
-        })
+        this.props.postSurvey(data);
     }
     render() {
         return (
@@ -32,15 +30,18 @@ class UploadSurvey extends Component {
                 height: '100px',
                 borderRadius: '10px',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                justifyContent: 'space-evenly',
+                marginBottom: '30px'
             }}>
-                <input type="file" name="file" onChange={this.onChangeHandler}
-                       style={{marginLeft: '20px', marginTop: '10px'}}/>
-                <button type="button" className="btn btn-success btn-block" onClick={this.onClickHandler}>Upload
+                <label htmlFor={'selectCSVInput'} className={'btn'} style={{ margin: '0 50px'}}> SELECT CSV SURVEY FILE </label>
+                <input type="file" name="file" onChange={this.onChangeHandler} id={'selectCSVInput'}
+                       style={{display: 'none'}}/>
+                <button type="button" className="btn btn-success btn-block" style={{ margin: '0 50px'}} onClick={this.onClickHandler}>Upload
                 </button>
             </div>
         )
     }
 }
 
-export default UploadSurvey;
+export default connect(null, {postSurvey})(UploadSurvey);

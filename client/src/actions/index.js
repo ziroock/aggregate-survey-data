@@ -8,3 +8,11 @@ export const getSurveys = () => {
         dispatch({ type: FETCH_SURVEYS, payload: res.data});
     };
 };
+
+export const postSurvey = (surveyData) => {
+    return async dispatch => {
+        const res = await axios.post('/api/postSurvey', surveyData );
+
+        dispatch({ type: FETCH_SURVEYS, payload: res.data});
+    };
+};
