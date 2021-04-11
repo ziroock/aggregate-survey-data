@@ -27,7 +27,7 @@
     questions: [{question: str, answer: str}] 
 ```
 -   [DONE] Update & Test '/postSurvey' to POST to DB
-    - REQ: CSV blob
+    - REQ: CSV formData
     - RES: 'uploaded to DB successful' / 'there was a problem'
 -   [DONE] Create & Test '/deleteSurvey' to DELETE from DB given surveyID
     - REQ: {str: surveyID}
@@ -37,7 +37,7 @@
     - REQ: NA
     - RES: JSON with all Survey IDs and Names
 -   [DONE] Update & Test '/postSurvey' to return Object with all surveys IDs and Names
-    - REQ: CSV blob
+    - REQ: CSV formData
     - RES: JSON with all Survey ID's and Names
 -   [DONE] Update & Test '/deleteSurvey' to POST updated list of all Survey Names and IDs
     - REQ: {str: surveyID, str: surveyName}
@@ -53,16 +53,16 @@
 1. Basic Front End Set Up
 -   [DONE] Get concurrently to run both front and back ends
 -   [DONE] Get redux, react-redux, react-router-dom, http-proxy-middleware
--   [] Set up Proxy
+-   [DONE] Set up Proxy
 -   [] Wire up Redux
 2. Functionality on HOME page
 -   [] Create home page
-    1. [] Wire up & Test Upload
+    1. [DONE] Wire up & Test Upload
     2. [] Wire up & Test Survey List
     3. [] Wire up & Test Delete Survey
-    -  [] Upload Button
-        -   [] OnCLick for upload Button
-            -   [] Need to upload and send a blob ???
+    -  [DONE] Upload Button
+        -   [DONE] OnCLick for upload Button
+            -   [DONE] Need to upload and send formData
     -   [] I will also have the table/ list of surveys
         -   [] OnClick for delete Button
             - [] Need to send a request to the server with the selected Survey Name and ID

@@ -18,11 +18,6 @@ module.exports = app => {
         const fileName = csvFile.originalname;
         let jsonObject = await csvToJSON(filePath);
 
-        jsonObject.map( (object) => {
-            console.log(object.userId);
-            console.log(object.questions);
-        });
-
         const survey = new Survey({
             name: fileName,
             participants: jsonObject.map((obj) => ({
