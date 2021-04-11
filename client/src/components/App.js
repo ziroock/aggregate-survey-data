@@ -5,6 +5,7 @@ import * as actions from '../actions';
 
 import Dashboard from './Dashboard';
 import Header from './Header';
+import SurveyAggregateData from './surveys/SurveyAggregateData';
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Header/>
                 <div className={'container'}>
                     <Route exact path={'/'} component={Dashboard}/>
+                    <Route path={'/survey/:surveyId'} component={SurveyAggregateData}/>
                 </div>
             </BrowserRouter>
         );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getSurveys } from '../../actions';
+import { getSurveys, deleteSurvey } from '../../actions';
 
 //#16A487 -
 
@@ -19,6 +19,9 @@ class SurveyList extends Component {
             return (
                 <div className="card blue darken-3" key={survey._id}>
                     <div className="card-content white-text">
+                        <button className=" waves-effect right btn" onClick={() => this.props.deleteSurvey({_id: survey._id})}>
+                            Delete
+                        </button>
                         <Link to={`/survey/${survey._id}`}><span className="card-title">{survey.name}</span></Link>
                         <p className="right">
                             Sent On: {new Date(survey.dateUploaded).toLocaleDateString()}
@@ -42,4 +45,4 @@ function mapStateToProps(state) {
     return { surveys: state.surveys };
 }
 
-export default connect(mapStateToProps, { getSurveys })(SurveyList);
+export default connect(mapStateToProps, { getSurveys, deleteSurvey })(SurveyList);

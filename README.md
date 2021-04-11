@@ -56,18 +56,18 @@
 -   [DONE] Set up Proxy
 -   [DONE] Wire up Redux
 2. Functionality on HOME page
--   [] Create home page
+-   [DONE] Create home page
     1. [DONE] Wire up & Test Upload
     2. [DONE] Wire up & Test Survey List
-    3. [] Wire up & Test Delete Survey
+    3. [DONE] Wire up & Test Delete Survey
     -  [DONE] Upload Button
         -   [DONE] OnCLick for upload Button
             -   [DONE] Need to upload and send formData
-    -   [] I will also have the table/ list of surveys
-        -   [] OnClick for delete Button
-            - [] Need to send a request to the server with the selected Survey Name and ID
-        -   [] OnClick on Survey Name
-            - [] Need to open a new page containing the aggregate data in tables
+    -   [DONE] I will also have the table/ list of surveys
+        -   [DONE] OnClick for delete Button
+            - [DONE] Need to send a request to the server with the selected Survey Name and ID
+        -   [DONE] OnClick on Survey Name
+            - [DONE] Need to open a new page containing the aggregate data in tables
 ```html
                 ---------------------
                 |   Upload Button   |
