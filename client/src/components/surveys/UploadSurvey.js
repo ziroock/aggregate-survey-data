@@ -22,22 +22,24 @@ class UploadSurvey extends Component {
         data.append('file', this.state.selectedFile)
         this.props.postSurvey(data);
     }
+
     render() {
         return (
             <div style={{
-                background: 'skyblue',
+
+                background: '#2C3E50',
                 width: 'auto',
-                height: '100px',
-                borderRadius: '10px',
+                height: '130px',
+                borderRadius: '3px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-evenly',
                 marginBottom: '30px'
             }}>
-                <label htmlFor={'selectCSVInput'} className={'btn'} style={{ margin: '0 50px'}}> SELECT CSV SURVEY FILE </label>
+                <label htmlFor={'selectCSVInput'} className={'btn waves-effect' } style={{ margin: '0 30px', background: '#16A487'}}> SELECT CSV SURVEY FILE </label>
                 <input type="file" name="file" onChange={this.onChangeHandler} id={'selectCSVInput'}
                        style={{display: 'none'}}/>
-                <button type="button" className="btn btn-success btn-block" style={{ margin: '0 50px'}} onClick={this.onClickHandler}>Upload
+                <button type="button" className="btn" style={{ margin: '0 30px'}} onClick={this.onClickHandler}>Upload
                 </button>
             </div>
         )

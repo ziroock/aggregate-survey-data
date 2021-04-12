@@ -6,7 +6,11 @@ import SurveyTable from './SurveyTable';
 
 //#455B72 - background ?
 
-//2C3E50 - survey cards
+//#426175
+
+//#4169877
+
+//#2C3E50 - survey cards
 
 class SurveyAggregateData extends Component {
     constructor(props) {
@@ -35,9 +39,14 @@ class SurveyAggregateData extends Component {
     render() {
         // console.log(this.props.match.params.surveyId);
         return (
-            <React.Fragment >
+            <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-evenly',
+                background: '#2C3E50'
+            }}>
                 {this.renderAggregateDataTables()}
-            </React.Fragment>
+            </div>
         );
     }
 }
