@@ -4,7 +4,10 @@
 ### Installation
 1. Run `npm install`inside the root folder.
 2. Run `npm install` inside /client.
-3. Run `npm run dev` from root folder.
+3. To connect to MongoDB (Atlas) create a file called *keys.js* inside the config folder.
+    - Inside *keys.js* ```module.exports = {
+      mongoURI: <yourMongoConnectString>}```
+4. Run `npm run dev` from root folder.
 
 - To run just the back end run `npm run server` from root folder.
 - To run just the front end run `npm run client` from root folder.
