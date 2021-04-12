@@ -1,5 +1,20 @@
 # AGGREGATE SURVEY DATA
 
+## DIRECTIONS
+### Installation
+1. Run `npm install`inside the root folder.
+2. Run `npm install` inside /client.
+3. Run `npm run dev` from root folder.
+
+- To run just the back end run `npm run server` from root folder.
+- To run just the front end run `npm run client` from root folder.
+
+#### NPM & Node:
+- npm v6.14.11
+- node v12.20.2
+- <b>IMPORTANT: </b> These are the versions used to create and test; however,   
+    they are not specified in package.json, so other versions might be used.
+
 ## GAME-PLAN
 #### I. Set up Back End - [ Node.js + Express ]
 1. Basic Set up:
