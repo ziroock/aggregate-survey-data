@@ -68,7 +68,7 @@
             - [DONE] Need to send a request to the server with the selected Survey Name and ID
         -   [DONE] OnClick on Survey Name
             - [DONE] Need to open a new page containing the aggregate data in tables
-```html
+```
                 ---------------------
                 |   Upload Button   |
                 ---------------------
@@ -81,11 +81,11 @@
                         .
                         .
 ```
-3. [] Functionality on AGGREGATE DATA Page
-- [] Create Page containing aggregate data
-    - [] Needs to have dynamic table ( Depending on the different aggregate data for each question )
-    - [] Needs to have dynamic amount of tables ( Depending on the number of questions )
-- [] First need to make sure that the data flow is consistent
-- [] Once Everything is wired up, create a functional component Dynamic Table
+3. [DONE] Functionality on AGGREGATE DATA Page
+- [DONE] Create Page containing aggregate data
+    - [DONE] Needs to have dynamic table ( Depending on the different aggregate data for each question )
+    - [DONE] Needs to have dynamic amount of tables ( Depending on the number of questions )
+- [DONE] First need to make sure that the data flow is consistent
+- [DONE] Once Everything is wired up, create a functional component Dynamic Table
 
 Planning 45 minutes

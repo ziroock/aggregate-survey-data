@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import SurveyTable from './SurveyTable';
 
 //#16A487 -
 
@@ -7,12 +9,36 @@ import React, { Component } from 'react';
 //2C3E50 - survey cards
 
 class SurveyAggregateData extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {surveyResults: {}}
+    }
+
+    componentDidMount() {
+        axios.post("/api/getAggregateSurvey", {surveyId: this.props.match.params.surveyId}, {
+        }).then(res => {
+            this.setState({surveyResults: res.data});
+        })
+    }
+
+    renderAggregateDataTables() {
+        let questionResults = this.state.surveyResults;
+        if(questionResults) {
+            console.log(questionResults);
+            return Object.keys(questionResults).map( question => {
+                return (<SurveyTable key={question} title={question} rowsData={questionResults[question]}/>)
+            });
+        }
+        return null;
+    }
+
     render() {
         console.log(this.props.match.params.surveyId);
         return (
-            <div >
+            <React.Fragment >
                 Aggregate data for surveyId: {this.props.match.params.surveyId }
-            </div>
+                {this.renderAggregateDataTables()}
+            </React.Fragment>
         );
     }
 }

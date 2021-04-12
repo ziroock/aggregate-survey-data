@@ -12,7 +12,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Header/>
-                <div className={'container'}>
+                <div className={'container'} style={{marginTop: '100px'}}>
                     <Route exact path={'/'} component={Dashboard}/>
                     <Route path={'/survey/:surveyId'} component={SurveyAggregateData}/>
                 </div>

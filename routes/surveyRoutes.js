@@ -85,6 +85,10 @@ module.exports = app => {
                 return questions;
             })
             const aggregateData = getAggregateData(questions);
+            // console.log(aggregateData);
+            // aggregateData.map(question => {
+            //     console.log(question)
+            // })
             res.send(aggregateData);
         } catch(err) {
             res.send({});
