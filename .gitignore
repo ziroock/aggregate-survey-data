@@ -4,4 +4,3 @@ tempCSV
 .idea
 yarn.lock
 keys.js
-config/keys.js
