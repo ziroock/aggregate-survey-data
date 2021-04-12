@@ -8,10 +8,6 @@ let getAggregateData = require('../utils/getAggregateData');
 const Survey = mongoose.model('surveys');
 
 module.exports = app => {
-    app.get('/', (req, res) => {
-        res.send('Hello World!');
-    });
-
     app.post('/api/postSurvey', upload.single('file'), async (req, res) => {
         const csvFile = req.file;
         const filePath = csvFile.destination + csvFile.filename;
