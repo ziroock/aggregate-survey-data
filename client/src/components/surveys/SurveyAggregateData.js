@@ -28,7 +28,6 @@ class SurveyAggregateData extends Component {
     renderAggregateDataTables() {
         let questionResults = this.state.surveyResults;
         if(questionResults) {
-            console.log(questionResults);
             return Object.keys(questionResults).map( question => {
                 return (<SurveyTable key={question} title={question} rowsData={questionResults[question]}/>)
             });
@@ -39,14 +38,23 @@ class SurveyAggregateData extends Component {
     render() {
         // console.log(this.props.match.params.surveyId);
         return (
-            <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-evenly',
-                background: '#2C3E50'
-            }}>
-                {this.renderAggregateDataTables()}
-            </div>
+            <React.Fragment>
+                <div style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-evenly',
+                    background: '#2C3E50',
+                    position: 'relative',
+                }}>
+                    {this.renderAggregateDataTables()}
+                </div>
+                <div className={'container'} style={{
+                    background: '#2C3E50',
+                    position: 'fixed',
+                    height: '100vh',
+                    width: '100%'
+                }}/>
+            </React.Fragment>
         );
     }
 }

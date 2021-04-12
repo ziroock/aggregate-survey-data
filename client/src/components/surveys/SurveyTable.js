@@ -2,9 +2,12 @@ import React from 'react';
 
 const SurveyTable = ({title, rowsData}) => {
     let generateAnswers = () => {
-        return Object.keys(rowsData).map( answer => {
+        return Object.keys(rowsData).sort((first, second) => {
+            return rowsData[second] - rowsData[first]
+        }).map( (answer, index) => {
             return (
                 <tr key={answer}>
+                    <td>{index + 1}</td>
                     <td>{answer}</td>
                     <td>{rowsData[answer]}</td>
                 </tr>
@@ -23,16 +26,24 @@ const SurveyTable = ({title, rowsData}) => {
             paddingTop: '20px',
             paddingBottom: '20px',
             borderRadius: '3px',
-            margin: '30px'
+            margin: '30px',
+            flexBasis: '100%'
         }}>
+            <div style={{
+                background: 'rgba(0,0,0, 0.2)',
+                padding: '10px',
+                borderRadius: '10px'
+            }}>
+                {title}
+            </div>
             <table>
-                <div style={{
-                    background: 'rgba(0,0,0, 0.2)',
-                    padding: '10px',
-                    borderRadius: '10px'
-                }}>
-                    {title}
-                </div>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Answer</td>
+                        <td>Votes</td>
+                    </tr>
+                </thead>
                 <tbody>
                     {generateAnswers()}
                 </tbody>

@@ -17,7 +17,7 @@ module.exports = app => {
         const filePath = csvFile.destination + csvFile.filename;
         const fileName = csvFile.originalname;
         let jsonObject = await csvToJSON(filePath);
-        console.log(csvFile);
+        // console.log(csvFile);
 
         const survey = new Survey({
             name: fileName,
@@ -51,7 +51,7 @@ module.exports = app => {
     });
 
     app.post('/api/deleteSurvey', async (req, res) => {
-        console.log(req.body);
+        // console.log(req.body);
         try{
             await Survey.deleteOne({ _id: req.body._id});
             console.log("Successfully deleted Survey!");

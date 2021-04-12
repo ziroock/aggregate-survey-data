@@ -21,9 +21,15 @@ class UploadSurvey extends Component {
         const data = new FormData()
         data.append('file', this.state.selectedFile)
         this.props.postSurvey(data);
+        this.setState({selectedFile: null});
     }
 
+
     render() {
+        let fileString = ''
+        if (this.state.selectedFile) {
+            fileString = 'Selected File: ' + this.state.selectedFile.name
+        }
         return (
             <div style={{
 
@@ -39,6 +45,7 @@ class UploadSurvey extends Component {
                 <label htmlFor={'selectCSVInput'} className={'btn waves-effect' } style={{ margin: '0 30px', background: '#16A487'}}> SELECT CSV SURVEY FILE </label>
                 <input type="file" name="file" onChange={this.onChangeHandler} id={'selectCSVInput'}
                        style={{display: 'none'}}/>
+                <label id={'fileString'} style={{textAlign: 'center', color: 'white', fontSize: '15px'}}>{fileString}</label>
                 <button type="button" className="btn" style={{ margin: '0 30px'}} onClick={this.onClickHandler}>Upload
                 </button>
             </div>
