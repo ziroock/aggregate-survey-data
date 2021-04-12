@@ -13,7 +13,7 @@ const SurveyTable = ({title, rowsData}) => {
     };
 
     return(
-        <table>
+        <table style={{marginBottom: '50px'}}>
             <thead>
                 <tr>{title}</tr>
                 {generateAnswers()}

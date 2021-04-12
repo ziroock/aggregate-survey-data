@@ -33,10 +33,9 @@ class SurveyAggregateData extends Component {
     }
 
     render() {
-        console.log(this.props.match.params.surveyId);
+        // console.log(this.props.match.params.surveyId);
         return (
             <React.Fragment >
-                Aggregate data for surveyId: {this.props.match.params.surveyId }
                 {this.renderAggregateDataTables()}
             </React.Fragment>
         );
