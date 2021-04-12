@@ -3,5 +3,5 @@ package-lock.json
 tempCSV
 .idea
 yarn.lock
-dev.js
-config/dev.js
+keys.js
+config/keys.js

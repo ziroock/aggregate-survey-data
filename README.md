@@ -11,12 +11,14 @@
 
 - To run just the back end run `npm run server` from root folder.
 - To run just the front end run `npm run client` from root folder.
+- <b>IMPORTANT: </b> On the <b>prod</b> branch add the connect MongoDB string to *dev.js*   
+  instead of adding it to *keys.js*!
 
 #### NPM & Node:
 - npm v6.14.11
 - node v12.20.2
-- <b>IMPORTANT: </b> These are the versions used to create and test; however,   
-    they are not specified in package.json, so other versions might be used.
+- <b>IMPORTANT: </b> On the <b>main</b> & <b>styled</b>  branches other versions might be used; however,
+  on the <b>prod</b> the above versions must be used or remove engines from package.json!
 
 ## GAME-PLAN
 #### I. Set up Back End - [ Node.js + Express ]
