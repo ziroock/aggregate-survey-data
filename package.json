@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "## GAME-PLAN #### I. Set up Back End - [ Node.js + Express ] 1. Basic Set up: -   [] Create & Test home route '/'     - REQ: NA     - RES: str HelloWorld -   [] Create & Test Survey '/postSurvey' to GET CSV     - REQ: CSV     - RES: str 'GotSurvey'/'There was a problem getting the survey' -   [] Create & Test function csvToJSON()     - IN: CSV     - OUT: JSON 2. DB Set up: -   [] Create DB Schema ```     --- SurveySchema ---",
   "main": "index.js",
+  "engines": {
+    "node": "v12.20.2",
+    "npm": "6.14.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
