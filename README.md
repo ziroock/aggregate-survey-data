@@ -1,5 +1,8 @@
 # AGGREGATE SURVEY DATA
 
+## TEST APPLICATION ONLINE
+#### [HERE](https://aggregate-survey-data.herokuapp.com/)
+
 ## DIRECTIONS
 ### Installation
 1. Run `npm install`inside the root folder.
