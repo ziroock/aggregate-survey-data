@@ -17,3 +17,30 @@ module.exports = async function csvToJSON(csvFilePath) {
     });
     return jsonObj;
 }
+
+// IN
+//  [
+//    {
+//      userId: '1',
+//      'Favorite Animal?': 'dog',
+//      'Least Favorite Animal?': 'cat'
+//    },
+//    {
+//      userId: '2',
+//      'Favorite Animal?': 'owl',
+//      'Least Favorite Animal?': 'rat'
+//    },
+//    {
+//      userId: '3',
+//      'Favorite Animal?': 'dog',
+//      'Least Favorite Animal?': 'rat'
+//    }
+// ]
+
+
+// OUT
+// [
+//    { userId: '1', questions: [ [Object], [Object] ] },
+//    { userId: '2', questions: [ [Object], [Object] ] },
+//    { userId: '3', questions: [ [Object], [Object] ] }
+// ]
