@@ -22,7 +22,7 @@ module.exports = function getAggregateData(surveyData) {
 };
 
 
-//
+// IN
 // [
 //     [
 //         {
@@ -61,3 +61,10 @@ module.exports = function getAggregateData(surveyData) {
 //         }
 //     ]
 // ]
+
+// OUT
+// {
+//    'Favorite Animal?': { dog: 2, owl: 1 },
+//    'Least Favorite Animal?': { cat: 1, rat: 2 }
+// }
+
