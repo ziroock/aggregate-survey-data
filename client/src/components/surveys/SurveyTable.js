@@ -2,6 +2,12 @@ import React from 'react';
 
 const SurveyTable = ({title, rowsData}) => {
     let generateAnswers = () => {
+        console.log("THE DATA IN: ", rowsData);
+        let totalAnswers = 0;
+        Object.keys(rowsData).forEach((answer) => {
+            totalAnswers += rowsData[answer]
+        })
+        console.log('ansers count: ', totalAnswers);
         return Object.keys(rowsData).sort((first, second) => {
             return rowsData[second] - rowsData[first]
         }).map( (answer, index) => {
@@ -10,6 +16,9 @@ const SurveyTable = ({title, rowsData}) => {
                     <td>{index + 1}</td>
                     <td>{answer}</td>
                     <td>{rowsData[answer]}</td>
+                    {/*%column*/}
+                    {/*Number((1.005).toFixed(2));*/}
+                    <td>{Number((rowsData[answer] / totalAnswers) * 100).toFixed(0)} % </td>
                 </tr>
             );
         });
@@ -42,6 +51,7 @@ const SurveyTable = ({title, rowsData}) => {
                         <td>#</td>
                         <td>Answer</td>
                         <td>Votes</td>
+                        <td>Percentage</td>
                     </tr>
                 </thead>
                 <tbody>
